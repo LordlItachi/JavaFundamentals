@@ -2,6 +2,9 @@ package com.company;
 interface Camera{
     void snapshot();
     void recordVideo();
+    default void panorama(){
+        System.out.println("Capturing an panorama please move camera pov ");
+    }
 }
 interface Wifi{
     String[] getAvailableNetworks();
@@ -52,6 +55,7 @@ public class Java_57_Interfaces_and_defaultMethods {
         System.out.println("You are connected to the Wifi : "+myPhone.connectedWifi);
         myPhone.callNumber(123456789);
         myPhone.recordVideo();
+        myPhone.panorama();
 
 
     }
