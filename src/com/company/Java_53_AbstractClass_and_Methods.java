@@ -1,10 +1,8 @@
 package com.company;
 
 abstract class Shape{
-    public void area(){
-    }
-    public void volume(){
-    }
+    public abstract void area();
+    public abstract void volume();
 }
 class Circle1 extends Shape{
     int radius;
@@ -17,6 +15,9 @@ class Circle1 extends Shape{
         float ans = pi*radius*radius;
         System.out.println("The area of this Circle is : "+ans+" metre square");
     }
+    public void volume(){
+        System.out.println("there is no volume in a 2D shape");
+    }
 }
 
 
@@ -24,5 +25,6 @@ public class Java_53_AbstractClass_and_Methods {
     public static void main(String[] args) {
         Circle1 circle1 = new Circle1(23);
         circle1.area();
+        circle1.volume();
     }
 }
