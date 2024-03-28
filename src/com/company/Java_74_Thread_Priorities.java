@@ -11,7 +11,7 @@ class T1 extends Thread{
     @Override
     public void run() {
         int i=0;
-        while (i<100) {
+        while (i<10) {
             System.out.println("Running Thread" + this.getName() + " !!!");
             i++;
         }
@@ -35,6 +35,7 @@ public class Java_74_Thread_Priorities {
         t3.start();
         t4.start();
         t5.start();
+
     }
 
 }
